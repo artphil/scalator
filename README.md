@@ -1,0 +1,2 @@
+# scalator
+Scale generator
