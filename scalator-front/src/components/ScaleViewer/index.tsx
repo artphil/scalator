@@ -1,13 +1,14 @@
 import { stringToHexColor } from "../../helpers/color.helper";
-import { getScale } from "../../services/scale.service";
 import { Cel, Col, Table } from "./styles";
 
 interface Props {
-  data: any
+  data: Array<Array<string>>;
+  axisX: Array<string>;
+  axisY: Array<string>;
 }
 
 function ScaleViewer(props: Props) {
-  const { data, axisX, axisY } = getScale();
+  const { data, axisX, axisY } = props;
 
   function dateFormat(strDate: string) {
     const date = new Date(strDate);

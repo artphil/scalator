@@ -1,8 +1,8 @@
-import ScaleViewer from './components/ScaleViewer'
+import ScalePage from './pages/scale/ScalePage'
 
 function App() {
   return (
-    <ScaleViewer />
+    <ScalePage />
   )
 }
 
