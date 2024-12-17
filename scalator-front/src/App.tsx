@@ -1,4 +1,4 @@
-import ScaleViewer from './components/scale/ScaleViewer'
+import ScaleViewer from './components/ScaleViewer'
 
 function App() {
   return (
