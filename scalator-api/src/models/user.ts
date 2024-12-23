@@ -6,6 +6,13 @@ class User extends Model {
   public id!: string;
   public name!: string;
   public email!: string;
+  public password!: string;
+
+  toJSON() {
+    const attributes = { ...this.get() };
+    delete attributes.password;
+    return attributes;
+  }
 }
 
 User.init(
@@ -23,6 +30,11 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+    },
+    password: {
+      type: DataTypes.STRING,
+      defaultValue: "Mudar123",
+      allowNull: false,
     },
   },
   {
