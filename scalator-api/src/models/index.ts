@@ -1,5 +1,5 @@
 import sequelize from "../config/database";
-import Usuario from "./user";
+import User from "./user";
 
 const initializeDatabase = async () => {
   try {
@@ -11,4 +11,4 @@ const initializeDatabase = async () => {
   }
 };
 
-export { sequelize, Usuario, initializeDatabase };
+export { sequelize, User, initializeDatabase };
