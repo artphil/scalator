@@ -1,4 +1,9 @@
 import sequelize from "../config/database";
+
+import Person from "./person";
+import Post from "./post";
+import Scale from "./scale";
+import ScalePost from "./scalePost";
 import User from "./user";
 
 const initializeDatabase = async () => {
@@ -11,4 +16,4 @@ const initializeDatabase = async () => {
   }
 };
 
-export { sequelize, User, initializeDatabase };
+export { sequelize, User, Post, Scale, ScalePost, Person, initializeDatabase };
