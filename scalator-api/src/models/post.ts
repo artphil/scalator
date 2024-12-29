@@ -15,7 +15,7 @@ Post.init(
       primaryKey: true,
     },
     name: {
-      type: DataTypes.UUID,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },

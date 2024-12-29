@@ -1,7 +1,11 @@
 import express from "express";
 import dotenv from "dotenv";
-import usersRouter from "./routes/users";
 import { initializeDatabase } from "./models";
+
+import usersRouter from "./routes/users";
+import scalesRouter from "./routes/scales";
+import postsRouter from "./routes/posts";
+import scalePostsRouter from "./routes/scalePosts";
 
 dotenv.config();
 
@@ -13,7 +17,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Rotas
-app.use("/api", usersRouter);
+app.use("/", usersRouter);
+app.use("/", scalesRouter);
+app.use("/", scalePostsRouter);
+app.use("/", postsRouter);
 
 // Inicializa o banco e sobe o servidor
 initializeDatabase();
