@@ -33,8 +33,7 @@ User.init(
     },
     password: {
       type: DataTypes.STRING,
-      defaultValue: "Mudar123",
-      allowNull: false,
+      allowNull: true,
     },
   },
   {
