@@ -21,7 +21,7 @@ Post.init(
   },
   {
     sequelize,
-    modelName: "Post",
+    modelName: "post",
     timestamps: false,
   }
 );

@@ -26,7 +26,7 @@ Person.init(
   },
   {
     sequelize,
-    modelName: "Person",
+    modelName: "person",
     timestamps: false,
   }
 );

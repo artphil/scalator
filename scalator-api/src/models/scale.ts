@@ -37,7 +37,7 @@ Scale.init(
   },
   {
     sequelize,
-    modelName: "Scale",
+    modelName: "scale",
     timestamps: false,
   }
 );

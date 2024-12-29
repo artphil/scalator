@@ -1,7 +1,10 @@
 import { DataTypes, Model } from "sequelize";
 import sequelize from "../config/database";
 import { v4 as uuidv4 } from "uuid";
+
 import Scale from "./scale";
+import Person from "./person";
+import Post from "./post";
 
 class ScalePost extends Model {
   public id!: string;
@@ -37,12 +40,10 @@ ScalePost.init(
   },
   {
     sequelize,
-    modelName: "ScalePost",
+    modelName: "scale-post",
     timestamps: false,
   }
 );
-
-export default ScalePost;
 
 Scale.hasMany(ScalePost, {
   foreignKey: "scaleId",
@@ -54,3 +55,9 @@ ScalePost.belongsTo(Scale, {
   foreignKey: "scaleId",
   onDelete: "CASCADE",
 });
+
+ScalePost.hasOne(Person, { foreignKey: "personId" });
+
+ScalePost.hasOne(Post, { foreignKey: "postId" });
+
+export default ScalePost;
